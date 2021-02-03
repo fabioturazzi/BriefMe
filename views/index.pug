@@ -1,0 +1,16 @@
+extends layout.pug
+
+block content 
+  article.grid-container.portfolio-intro
+    block sidebar
+    br
+    .cell.auto
+    .container
+      .row
+        each article in articleData
+          .col-sm
+            a(href='/articles/' + article.id)
+              img.thumbnail(src='' + article.img class='image')
+              h5= article.title
+              p= article.description
+    p= test

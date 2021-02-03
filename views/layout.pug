@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+html(class="no-js" lang="en" dir="ltr")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title BriefMe News Summarizer
+    link(href='https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,800', rel='stylesheet')
+    link(rel='stylesheet', href='/public/css/bootstrap.css')
+    link(rel='stylesheet', href='/public/css/style.css')
+  body
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      .container-fluid
+        //- a.navbar-brand(href='#') Navbar
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.me-auto.mb-2.mb-lg-0
+            each category in categories
+              li.nav-item
+                a.nav-link(href='/' + category)= category
+                //- p= category
+          form.d-flex
+            input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
+            button.btn.btn-outline-success(type='submit') Search
+    block content
+        
+
+  script(src='/public/js/jquery.js')
+  script(src='/public/js/bootstrap.js')
+  script(src='/public/js/scripts.js')
+
