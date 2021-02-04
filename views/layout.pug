@@ -18,13 +18,15 @@ html(class="no-js" lang="en" dir="ltr")
           ul.navbar-nav.me-auto.mb-2.mb-lg-0
             each category in categories
               li.nav-item
-                a.nav-link(href='/' + category)= category
+                if category == 'All news'
+                  a.nav-link(href='/')= category
+                else
+                  a.nav-link(href='/' + category)= category
                 //- p= category
           form.d-flex
-            input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
-            button.btn.btn-outline-success(type='submit') Search
+            input#searchForm.form-control.me-2(type='search' placeholder='Search Articles' aria-label='Search' name='searchParam')
+            //- button.btn.btn-outline-success(type='submit') Search
     block content
-        
 
   script(src='/public/js/jquery.js')
   script(src='/public/js/bootstrap.js')

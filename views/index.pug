@@ -8,9 +8,11 @@ block content
     .container
       .row
         each article in articleData
-          .col-sm
-            a(href='/articles/' + article.id)
-              img.thumbnail(src='' + article.img class='image')
+          .col-3
+            a(href= `${article.link}`)
+              if article.img
+                img.thumbnail(src= `${article.img}` class='image')
               h5= article.title
+              h6= article.source
               p= article.description
     p= test
