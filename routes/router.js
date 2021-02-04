@@ -1,11 +1,13 @@
 const router = require("express").Router();
 const fs = require('fs');
 let Article = require("../models/article");
+// var session = require('express-session');
+// https://stackoverflow.com/questions/40755622/how-to-use-session-variable-with-nodejs
+// var ssn;
+// app.use(session({secret:'briefmeallday'}));
 
 var rawData = fs.readFileSync('data.json');
 var dataJson = JSON.parse(rawData);
-
-// https://stackoverflow.com/questions/40755622/how-to-use-session-variable-with-nodejs
 
 //Router for home page of the application
 router.route("/").get((req, res, next) => {
@@ -13,7 +15,7 @@ router.route("/").get((req, res, next) => {
   Article.find({})
     .then((articles) => {
       //Render home page with data from mongodb
-        res.render('index', {articleData: articles, categories: dataJson.categories});
+        res.render('index', {articleData: articles, appData: dataJson});
         next();
     })
     .catch((err) => res.status(400).json("Error: " + err));
@@ -26,7 +28,7 @@ router.route("/:category").get((req, res, next) => {
   Article.find({ 'category': req.params.category })
     .then((articles) => {
       //Render home page with data from mongodb filtered by category
-        res.render('index', {articleData: articles, categories: dataJson.categories});
+        res.render('index', {articleData: articles, appData: dataJson});
         next();
     })
     .catch((err) => res.status(400).json("Error: " + err));

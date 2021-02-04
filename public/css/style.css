@@ -6,7 +6,10 @@ body{
 a {
   text-decoration: none !important; 
 }
-a>h7:hover  {
+.navbar-light {
+  background-color: white !important;
+}
+a>h6:hover  {
   text-decoration: underline !important; 
 }
 a>h5:hover  {
@@ -15,7 +18,9 @@ a>h5:hover  {
 a{
   color: #333;
 }
-
+.source-nav-active {
+  background-color: lightblue;
+}
 a:hover{
   color: #111;
 }

@@ -24,4 +24,7 @@
     ],
 "categories": [
     "All news", "Politics", "Sports", "Enternainment", "Health", "World"
-]}
+],
+"articleSources": [ "cnn.com", "CNBC", "NYTimes" ]
+
+}

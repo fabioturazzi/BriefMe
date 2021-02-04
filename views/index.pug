@@ -1,18 +1,29 @@
 extends layout.pug
 
 block content 
-  article.grid-container.portfolio-intro
+
+  article
     block sidebar
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      .container-fluid
+        //- a.navbar-brand(href='#') Navbar
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.me-auto.mb-2.mb-lg-0
+            li.nav-item.nav-allsources.source-nav-active.nav-link All Sources
+            each source in appData.articleSources
+              li.nav-item.nav-sources.nav-link= source
     br
     .cell.auto
     .container
       .row
         each article in articleData
           .col-3
-            a(href= `${article.link}`)
+            a.article-link(href= `${article.link}`)
               if article.img
-                img.thumbnail(src= `${article.img}` class='image')
-              h5= article.title
-              h6= article.source
-              p= article.description
+                img.article-img.thumbnail(src= `${article.img}` class='image')
+              h5.article-title= article.title
+              h6.article-source= article.source
+              p.article-text= article.description
     p= test
