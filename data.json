@@ -1,30 +1,6 @@
-{"articleData": [
-        {
-            "id":"0",
-            "title":"This is an article",
-            "category":"Politics",
-            "description":"A traditional game of Battleships! Try to guess the location of ships in a grid with the least amount of tries to win.A traditional game of Battleships! Try to guess the location of ships in a grid with the least amount of tries to win.",
-            "img":"https://static9.depositphotos.com/1011646/1236/i/600/depositphotos_12369509-stock-photo-breaking-news-screen.jpg"
-        },
-        {
-            "id":"0",
-            "title":"This is an article",
-            "category":"Sports",
-            "description":"A traditional game of Battleships! Try to guess the location of ships in a grid with the least amount of tries to win.A traditional game of Battleships! Try to guess the location of ships in a grid with the least amount of tries to win.",
-            "img":"https://static9.depositphotos.com/1011646/1236/i/600/depositphotos_12369509-stock-photo-breaking-news-screen.jpg"
-        },
-        {
-            "id":"0",
-            "title":"This is an article",
-            "category":"Health",
-            "description":"A traditional game of Battleships! Try to guess the location of ships in a grid with the least amount of tries to win.A traditional game of Battleships! Try to guess the location of ships in a grid with the least amount of tries to win.",
-            "image_urls":["/images/Battleship_1.PNG","/images/Battleship_2.PNG","/images/Battleship_3.PNG"],
-            "img":"https://static9.depositphotos.com/1011646/1236/i/600/depositphotos_12369509-stock-photo-breaking-news-screen.jpg"
-        }
-    ],
+{
 "categories": [
-    "All news", "Politics", "Sports", "Enternainment", "Health", "World"
+    "World","Canada", "Politics","Business", "Technology", "Science", "Entertainment", "Health"
 ],
-"articleSources": [ "cnn.com", "CNBC", "NYTimes" ]
-
+"articleSources": [ "CNN", "BBC", "CBC", "GlobalNews", "NPR", "AP" ]
 }

@@ -11,27 +11,26 @@ var dataJson = JSON.parse(rawData);
 
 //Router for home page of the application
 router.route("/").get((req, res, next) => {
-  // find all articles for a given category
-  Article.find({})
-    .then((articles) => {
+  //Declare query string based on existing query parameters and parse to JSON
+  var queryString = JSON.parse("{ "+
+                    (req.query.category ? '"category":"' + req.query.category + '"' : "") + (req.query.category && req.query.source ? "," : "") +
+                    (req.query.source ? '"source":"' + req.query.source + '"' : "") + " }");
+
+  //Find all articles matching query string
+  Article.find(queryString).sort({topstory: -1, title:1}).select({ "title": 1,"category": 1,"summary": 1,"topstory":1,"img": 1,"source": 1,"link": 1, "_id": 0})
+  .then((articles) => {
+
+    var queryCategories = JSON.parse("{" + (req.query.category ? '"category":"' + req.query.category + '"' : "") + "}");
+    //Find unique categories from that source
+    Article.find(queryCategories).distinct('source')
+    .then((sources) => {
       //Render home page with data from mongodb
-        res.render('index', {articleData: articles, appData: dataJson});
-        next();
+      res.render('index', {articleData: articles, appData: dataJson, currSources: sources, currSource: req.query.source, currCategory: req.query.category});
+      next();
     })
     .catch((err) => res.status(400).json("Error: " + err));
-});
-
-//Router for specific article categories
-router.route("/:category").get((req, res, next) => {
-
-  // find all articles for a given category
-  Article.find({ 'category': req.params.category })
-    .then((articles) => {
-      //Render home page with data from mongodb filtered by category
-        res.render('index', {articleData: articles, appData: dataJson});
-        next();
-    })
-    .catch((err) => res.status(400).json("Error: " + err));
+  })
+  .catch((err) => res.status(400).json("Error: " + err));
 });
 
 //Export router to be used in server.js
