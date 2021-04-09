@@ -5,17 +5,20 @@ block content
     div.container-md
       br
       .cell.auto
-      .container
+      .container.container_art
         div.grid
           each article in articleData
             div.grid-item
+              //- p=article.topstory
+              if article.img && article.img != "NaN"
+                img.article-img.thumbnail(src= `${article.img}` class='image')
+              h5.article-title= article.title
+              img.play-icon(src='/public/img/play.png')
+              img.pause-icon(src='/public/img/pause.png')
+              img.stop-icon(src='/public/img/stop.png')
               a.article-link(href= `${article.link}`)
-                //- p=article.topstory
-                if article.img && article.img != "NaN"
-                  img.article-img.thumbnail(src= `${article.img}` class='image')
-                h5.article-title= article.title
                 h6.article-source Source: #{article.source}
-                p.article-text= article.summary
+              p.article-text= article.summary
           div.grid-sizer
       div.no-results-found
         h1 Sorry, no results were found for this search on the current source and category :(

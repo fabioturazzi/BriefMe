@@ -27,9 +27,11 @@ body{
   z-index:2;
 }
 .container{
-  margin:2.5%;
   margin-top:6.5%;
   min-width: 95%;
+}
+.container_art {
+    margin:2.5%;
 }
 a {
   text-decoration: none !important; 
@@ -37,7 +39,6 @@ a {
 .navbars-group {
   height: 100px;
 }
-
 .navbar-light {
   height:50%;
 }
@@ -60,11 +61,51 @@ a {
   height:50px;
 
 }
-#categoryNav {
-
-}
 #sourceNav {
   background-color: white !important;
+}
+.play-icon,.stop-icon,.pause-icon {
+  max-width: 40px;
+  margin-right: 7px;
+  float:left;
+}
+.volume-icon {
+  max-height: 20px;
+  margin:15px 10px 10px 2px;
+}
+#volumeForm {
+  margin:13px 0px 10px 5px;
+}
+input[type='range']::-webkit-slider-thumb {
+  background: #5D6975 ;
+}
+.form-nav {
+  min-width: 400px;
+}
+#searchForm {
+  min-width: 140px;
+  max-height: 40px;
+  margin:5px;
+}
+.stop-all {
+  margin:5px;
+}
+.article-source {
+  float:none;
+}
+.article-title {
+  font-weight: bold;
+  color:rgb(30,30,30);
+  text-align: left;
+}
+.play-icon:hover,.stop-icon:hover,.pause-icon:hover {
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius:50%;
+}
+#logo-written {
+  max-height:50px;
+  padding:10px;
+  margin:0;
 }
 
 h5 {
@@ -123,6 +164,70 @@ p{
   background-color: #111;
 }
 
+.details {
+  text-align: center;
+  color: #666666;
+}
+.dev-info {
+  max-width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float:none;
+  padding:2.5%;
+}
+#dev-fabio {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  margin-left: 30%;
+}
+#dev-uyen {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  margin-right: 40%;
+}
+#tech1 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  margin: 5%;
+}
+#tech2 {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  margin: 5%;
+}
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  background-color: rgb(240,240,240);
+  padding: 0;
+  margin-bottom: 0;
+}
+.about-img {
+  max-height: 50px;
+}
+.dev-img {
+  max-width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-main {
+  background-color: rgba(33, 37, 41);
+}
+.about-text {
+  background-color: rgb(240,240,240);
+  padding: 2%;
+}
+.about-title {
+  color:white;
+  margin-bottom: 0;
+}
+.about-page {
+  text-align: center;
+  padding: 0;
+  margin:0;
+}
 .image{
   display: inline-block;
   max-width: 100%;

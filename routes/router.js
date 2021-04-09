@@ -33,5 +33,18 @@ router.route("/").get((req, res, next) => {
   .catch((err) => res.status(400).json("Error: " + err));
 });
 
+//Router for about page of the application
+router.route("/about").get((req, res, next) => {
+
+    //Find unique categories from that source
+    Article.find({}).distinct('source')
+    .then((sources) => {
+      //Render home page with data from mongodb
+      res.render('about', {appData: dataJson, currSources: sources});
+      next();
+    })
+    .catch((err) => res.status(400).json("Error: " + err));
+});
+
 //Export router to be used in server.js
 module.exports = router;
