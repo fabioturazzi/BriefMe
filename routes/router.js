@@ -40,7 +40,7 @@ router.route("/about").get((req, res, next) => {
     Article.find({}).distinct('source')
     .then((sources) => {
       //Render home page with data from mongodb
-      res.render('about', {appData: dataJson, currSources: sources});
+      res.render('about', {appData: dataJson, currSources: sources, currCategory: "about", currSource: "about"});
       next();
     })
     .catch((err) => res.status(400).json("Error: " + err));

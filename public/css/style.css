@@ -107,6 +107,13 @@ input[type='range']::-webkit-slider-thumb {
   padding:10px;
   margin:0;
 }
+#logo-written-active {
+  max-height:50px;
+  padding:10px;
+  margin:0;
+  border: solid 1px #5D6975;
+  background-color: #495158;
+}
 
 h5 {
   font-size: 18px;

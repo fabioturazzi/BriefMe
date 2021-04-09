@@ -33,7 +33,10 @@ html(class="no-js" lang="en" dir="ltr")
                       a.nav-link(href=`/?category=${category}`)= category
             a(href=`/about`)
               div.logo
-                img#logo-written(src='/public/img/written_logo.png')
+                if currCategory == "about"
+                  img#logo-written-active(src='/public/img/written_logo.png')
+                else
+                  img#logo-written(src='/public/img/written_logo.png')
           nav.navbar.navbar-expand-lg.navbar-dark.bg-dark#navbar2
             button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
               span.navbar-toggler-icon
