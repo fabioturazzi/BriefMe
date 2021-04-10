@@ -9,8 +9,7 @@ block content
         div.grid
           each article in articleData
             div.grid-item
-              //- p=article.topstory
-              if article.img && article.img != "NaN"
+              if article.img && article.img != "NaN" && article.source != "ABC"
                 img.article-img.thumbnail(src= `${article.img}` class='image')
               h5.article-title= article.title
               img.play-icon(src='/public/img/play.png')
@@ -21,4 +20,4 @@ block content
               p.article-text= article.summary
           div.grid-sizer
       div.no-results-found
-        h1 Sorry, no results were found for this search on the current source and category :(
+        h1 Sorry, no results were found for this search on the current source and category.

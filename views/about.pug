@@ -21,7 +21,7 @@ block content
                     img.dev-img(src='/public/img/Uyen.png')
                     div.details
                         p
-                        b.dev-details Do Man Uyen Nguyen
+                        b.dev-details Winnie Nguyen
                         .dev-details uyen.m.nguyen14@gmail.com
                         a(href=`www.linkedin.com/in/winnienguyenn/`).dev-details https://www.linkedin.com/in/winnienguyenn/
             .about-main
@@ -31,27 +31,34 @@ block content
                 p.about-paragraph This application applies Web Scraping techniques to consolidate articles from sources such as BBC, CNBC, CNN, among others. Additionally, it differentiates itself from other news compilers by applying Natural Language Processing techniques to summarize those articles, offering quick briefings for users. Combining these two factors, we believe that we offer a better way for users to efficiently browse articles, while providing links to the full articles for those who wish to obtain more detailed information.
                 p.about-paragraph
                     b Disclaimer: 
-                    | This application was developed for study purposes and is not intended for commercial use.
+                    | This application was developed for study purposes and is not intended for commercial use. 
             .about-main
                 h2.about-title Technologies Used
-            .grid-container
+            .tech-grid-container
                 #tech1
-                    p.about-paragraph 
-                        b Web Application: 
-                        | Node.js/Express, Pug, Mongoose
-                    p.about-paragraph
-                        b Database Loader: 
-                        | PyCharm application, using the libraries listed by task as follows
+                    b Web Application:
+                    ul
+                        li 
+                            b Backend: 
+                            | Node.js/Express + Mongoose
+                        li 
+                            b Frontend: 
+                            | Pug + JQuery
+                        li 
+                            b Text-to-speech: 
+                            | speechSynthesis 
                 #tech2
-                    p.about-paragraph
-                        b Web Scraping: 
-                        | BeautifulSoup, Requests-html
-                    p.about-paragraph 
-                        b Summarization: 
-                        | PyTorch, Transformers, BART
-                    p.about-paragraph 
-                        b Additional utilities: 
-                        | Pandas, Pymongo
+                    b Database Loader (PyCharm Python Program): 
+                    ul
+                        li
+                            b Web Scraping: 
+                            | BeautifulSoup, Requests-html
+                        li 
+                            b Summarization: 
+                            | PyTorch, Transformers, BART
+                        li 
+                            b Additional utilities: 
+                            | Pandas, Pymongo
             .about-main
                 h2.about-title Development Information
             .about-text

@@ -46,7 +46,7 @@ $( document ).ready(function() {
                 msg.text = text;
                 msg.rate = 0.8;
                 msg.lang = 'en-US';
-                msg.pitch = 0.2;
+                msg.pitch = 0.8;
                 msg.volume = $('#volumeForm').val();
 
                 speechSynthesis.speak(msg);
