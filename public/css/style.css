@@ -3,7 +3,6 @@ body{
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   text-align: justify;
 }
-
 .grid-sizer,
 .grid-item { 
   width: 25%;
@@ -262,4 +261,10 @@ p{
   border-radius: 0;
   box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
   line-height: 0;
+}
+.smallBody { 
+  font-size: 10px !important; 
+}
+.smallNav { 
+  background-color: rgba(33, 37, 41) !important; 
 }

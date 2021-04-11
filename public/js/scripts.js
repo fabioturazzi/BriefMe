@@ -1,7 +1,7 @@
 $( document ).ready(function() {
     //Hide the div indicating no results were found
     $(".no-results-found").hide()
-    
+
     //Event handler for search form
     $("#searchForm").on('input', function() {
         $(".no-results-found").hide()
@@ -44,5 +44,37 @@ $( document ).ready(function() {
         columns: 4,
         transitionDuration: '0.5s'
     });
+    //Notify user when window is resized
+    function checkWindowSize() {
+        if($(window).width() < 1200) {
+            window.alert("This is not a responsive page! For optimal functionality and layout, please open this application on a larger window.");
+            $('#logo-img').hide();
+            $('#logo-written-active').hide();
+            $('#logo-written').hide();
+            $('.play-icon').hide();
+            $('.pause-icon').hide();
+            $('.stop-icon').hide();
+            $('.stop-all').hide();
+            $('#volumeForm').hide();
+            $('.volume-icon').hide();
+        } else {
+            $('#logo-img').show();
+            $('#logo-written-active').show();
+            $('#logo-written').show();
+            $('.play-icon').show();
+            $('.pause-icon').show();
+            $('.stop-icon').show();
+            $('.stop-all').show();
+            $('#volumeForm').show();
+            $('.volume-icon').show();
+
+        }
+    }
+    checkWindowSize();
+
+    $( window ).resize(function() {
+        checkWindowSize();
+    });
+    
     
 });
