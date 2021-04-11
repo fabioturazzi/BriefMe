@@ -47,7 +47,7 @@ $( document ).ready(function() {
     //Notify user when window is resized
     function checkWindowSize() {
         if($(window).width() < 1200) {
-            window.alert("This is not a responsive page! For optimal functionality and layout, please open this application on a larger window.");
+            window.alert("This page was not designed for mobile use. For optimal functionality and layout, please open this application on a browser with a larger window.");
             $('#logo-img').hide();
             $('#logo-written-active').hide();
             $('#logo-written').hide();
