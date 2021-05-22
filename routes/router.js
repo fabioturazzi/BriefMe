@@ -17,7 +17,7 @@ router.route("/").get((req, res, next) => {
                     (req.query.source ? '"source":"' + req.query.source + '"' : "") + " }");
 
   //Find all articles matching query string
-  Article.find(queryString).sort({topstory: -1, title:1}).select({ "title": 1,"category": 1,"summary": 1,"topstory":1,"img": 1,"source": 1,"link": 1, "_id": 0})
+  Article.find(queryString).sort({topstory: -1, category:1, source: -1}).select({ "title": 1,"category": 1,"summary": 1,"topstory":1,"img": 1,"source": 1,"link": 1, "_id": 0})
   .then((articles) => {
 
     var queryCategories = JSON.parse("{" + (req.query.category ? '"category":"' + req.query.category + '"' : "") + "}");
