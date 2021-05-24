@@ -1,5 +1,5 @@
 # BriefMe
-## A Web Application that delivers summarized news articles
+## A Web Application for news articles scraping and summarization
 
 ## Overview:
 
