@@ -41,12 +41,20 @@ This application is responsible for accessing information from Mongoose cluster,
 |   --- css                                Folder containing css files for site and Bootstrap layouts
 |   --- img                                Folder containing static images rendered on the website
 |   --- js                              
-|       ---- bootstrap.js, jquery.js,      Imports for used libraries
-masonry.js                              
-|       ---- scripts.js                    Front-end scripts for page behavior
-|       ---- speech.js                     Scripts for text-to-speech generation
+|     ---- bootstrap, jquery, masonry.js   Imports for used libraries
+|     ---- scripts.js                      Front-end scripts for page behavior
+|     ---- speech.js                       Scripts for text-to-speech generation
+| -- project_report
+|   --- BriefMe - Project Report.pdf       Complete report describing project development process
 | -- node_modules                          Node.js setup files
 | -- data.json                             Application static data
 | -- package-lock, package.json            Server package configuration
 | -- server.js                             Main application file for server execution
 ```
+
+## Challenges:
+The main challenges we found throughout development were related to maintaining responsiveness of the Web Application given the large amounts of processing necessary to scrape and summarize articles. As explained before, we have mitigated this issue by modularizing the application, separating the complete database loading process into a separate Python program.
+
+Moreover, implementing an effective UI to deliver content with the desired simplicity was also a central consideration for the web application. The final solution we proposed uses a masonry layout with filter options, maintaining an intuitiveness-focused interface.
+
+Some of the more technically complex challenges we faced are attributed to the database loader section of the application, with the most notable ones being limited processing and summary quality. A more detailed breakdown of these two aspects can be found in the [BriefMeDbLoader repo](https://github.com/fabioturazzi/BriefMeDbLoader) or in the project report contained in this repo.
