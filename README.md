@@ -3,23 +3,14 @@
 
 ## Overview:
 
-<<<<<<< HEAD
 [BriefMe](https://briefmenews.herokuapp.com/) full project consists of:
 - [BriefMeDbLoader repo](https://github.com/fabioturazzi/BriefMeDbLoader) - a PyCharm program responsible for scraping articles from the web, summarizing them, and loading a MongoDB database, and 
 - [BriefMe repo](https://github.com/fabioturazzi/BriefMe) - Node.js web application, reponsible for pulling article contents from the database and displaying it on the website, as well as supporting additional functions to help filtering and listening to news.  
-=======
-[BriefMe](https://briefmenews.herokuapp.com/) full project consists of [BriefMeDbLoader repo](https://github.com/fabioturazzi/BriefMeDbLoader) as the database loader, responsible for obtaining data and preparing it for the web application, 
-and [BriefMe repo](https://github.com/fabioturazzi/BriefMe) and the web application, reponsible for pulling contents from the database and displaying it on the website, as well as supporting additional functions to help filtering news and listening to news.
->>>>>>> e6d6ee92e8b96cbccccd4d5cd1a70309bce12e65
 
 **Features:** Topic filtering, Keyword filtering, Source filtering, Text to speech
-
+ 
 **Tools:** 
-<<<<<<< HEAD
 - Backend: [Node.js](https://nodejs.org/en/about/)/ [Express](https://expressjs.com/), [Mongoose](https://www.mongoose.com/)
-=======
-- Backend: [Node.js](https://nodejs.org/en/about/)/ [Express](https://expressjs.com/)
->>>>>>> e6d6ee92e8b96cbccccd4d5cd1a70309bce12e65
 - Frontend: [pug](https://pugjs.org/api/getting-started.html), [JQuery](https://jquery.com/)
 - Text to speech: [speechSynthesis](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
 
@@ -32,11 +23,7 @@ This application applies Web Scraping techniques to consolidate articles from so
 **Disclaimer: This application was developed for study purposes and is not intended for commercial use.**
 
 ## Functionality
-<<<<<<< HEAD
 This application is responsible for accessing information from Mongoose cluster, displaying them on the web application. Provides an UI for interaction with the app, containing filtering options and text-to-speech functionality.
-=======
-This application is responsible for accessing information from Mongoose cluster, displaying them on the web application, providing a UI for users to interact with the app, by providing filtering options, as well as the feature to listen to the summarized articles.
->>>>>>> e6d6ee92e8b96cbccccd4d5cd1a70309bce12e65
 
 ## Directory
 ```
